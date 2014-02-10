@@ -1,10 +1,11 @@
-Some little utility scripts that I have written in Python. Some may be more
-useful than others.
+Some little utility scripts that I have written in Python. Some may be
+more useful than others.
 
 word_swap.py
-	A Python script that takes a word an makes a given number of other "words"
-	by shuffling around the letters in that word. Might be useful for
-	something.
+	A Python script that takes a word an makes a given number of other
+	"words"	by shuffling around the letters in that word. Might be
+	useful for something.
 
 random_numbers.py
-	A script that gives the numbers in a given range back in a random order.
+	A script that gives the numbers in a given range back in a random
+	order.
