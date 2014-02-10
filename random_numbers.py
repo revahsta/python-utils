@@ -19,6 +19,10 @@ def getRandomNumbers(min_number, max_number):
 	Returns:
 		a Python list containing the numbers in a randomized order
 	"""
+	
+	if min_number > max_number:
+		raise ValueError('max must be > min')
+	
 	random.seed()
 	count = min_number
 	numbers = []

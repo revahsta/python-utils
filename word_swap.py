@@ -10,7 +10,7 @@ import argparse
 import random
 import sys
 
-def SwapWord(word, num_words):
+def swapWord(word, num_words):
 	"""
 	Swaps a word around to produce a number of other "words".
 
@@ -62,7 +62,7 @@ if __name__ == "__main__":
 	args = parser.parse_args()
 	
 	try:
-		word_list = SwapWord(args.word, args.num)
+		word_list = swapWord(args.word, args.num)
 	except ValueError as e:
 		print "Invalid Input: " + str(e)
 		sys.exit(1)
