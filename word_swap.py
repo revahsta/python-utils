@@ -1,10 +1,10 @@
 """
- Takes a word and generates a number of versions of that word with the
-  characters shifted around. The word must be at more than two characters
-  long. It is intended to be used on single words, but could also work
-  phrases.
+Takes a word and generates a number of versions of that word with the
+characters shifted around. The word must be at more than two characters
+long. It is intended to be used on single words, but could also work
+phrases.
 
-  By Alex Shaver
+ By Alex Shaver
 """
 import argparse
 import random

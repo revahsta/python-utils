@@ -1,5 +1,33 @@
+"""
+Generates a randomized ordering of numbers between a given max and min. It
+can be run standalone with command-line arguments (see --help for details).
+
+By Alex Shaver
+"""
 import random
 import argparse
+
+def getRandomNumbers(min_number, max_number):
+	"""
+	Returns a randomized ordering of all of the numbers between a given
+	minimum and maximium (inclusive).
+
+	Args:
+		min_number: the number to start the range at
+		max_number: the number to end the range with
+
+	Returns:
+		a Python list containing the numbers in a randomized order
+	"""
+	random.seed()
+	count = min_number
+	numbers = []
+	while count <= max_number:
+		num = random.randint(min_number, max_number)
+		if not num in numbers:
+			numbers.append(num)
+			count += 1
+	return numbers
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
@@ -7,16 +35,5 @@ if __name__ == "__main__":
 	parser.add_argument("-n", "--min",type=int, help="min number to generate",
 									  			default=0)
 	args = parser.parse_args()
-	
-	random.seed()
-	count = args.min
-	numbers = []
-	while count < args.max:
-		num = random.randint(args.min, args.max)
-		if not num in numbers:
-			print num
-			numbers.append(num)
-			count += 1
 
-
-
+	print getRandomNumbers(args.min, args.max)
