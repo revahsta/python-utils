@@ -6,11 +6,12 @@ phrases.
 
  By Alex Shaver
 """
-import argparse
 import random
 import sys
 
-def swapWord(word, num_words):
+import argparse
+
+def swap_word(word, num_words):
 	"""
 	Swaps a word around to produce a number of other "words".
 
@@ -30,21 +31,21 @@ def swapWord(word, num_words):
 	random.seed()
 
 	words = []
-	# make the requested number of randomized words
+	# Make the requested number of randomized words
 	for i in range(0, num_words):
 		positions = [] # list of positions already chosen
-		# iterate through the string
+		# Iterate through the string
 		newWord = list(word)
 		for char in word:
-			# create a list to contain the letters of the new word
+			# Create a list to contain the letters of the new word
 			while(True):
-				# choose a position in the string
+				# Choose a position in the string
 				position = random.randint(0,len(word) - 1)
-				# check if the position hasn't already been chosen
+				# Check if the position hasn't already been chosen
 				if position not in positions:
-					# add position to the list
+					# Add position to the list
 					positions.append(position)
-					# put the character in the new word
+					# Put the character in the new word
 					newWord[position] = char
 					break
 				else:
@@ -62,7 +63,7 @@ if __name__ == "__main__":
 	args = parser.parse_args()
 	
 	try:
-		word_list = swapWord(args.word, args.num)
+		word_list = swap_word(args.word, args.num)
 	except ValueError as e:
 		print "Invalid Input: " + str(e)
 		sys.exit(1)

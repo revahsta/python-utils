@@ -5,9 +5,10 @@ can be run standalone with command-line arguments (see --help for details).
 By Alex Shaver
 """
 import random
+
 import argparse
 
-def getRandomNumbers(min_number, max_number):
+def get_random_numbers(min_number, max_number):
 	"""
 	Returns a randomized ordering of all of the numbers between a given
 	minimum and maximium (inclusive).
@@ -40,4 +41,4 @@ if __name__ == "__main__":
 									  			default=0)
 	args = parser.parse_args()
 
-	print getRandomNumbers(args.min, args.max)
+	print get_random_numbers(args.min, args.max)
